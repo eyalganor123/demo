@@ -1,16 +1,75 @@
-<!doctype>
+
+<!DOCTYPE>
 <html>
-	<head>
-		<title>Eyal</title>
+<head>
+	<title>ex1</title>
 		<style>
-			html{
-				background: blue;
-				color: white;
+		 *{
+			 	margin:0;
+
+		 }
+		 	body{
+				font-family:arial, sans-serif;
+				font-size: 10px;
+		 	}
+			header,nav,footer{
+				margin:10px;
+				padding:20px;
+				border: 2px solid black;
+				width:90%;
+				text-align: center;
 			}
+			sidebar {
+				bottom:200;
+				margin:20px;
+				float:right;
+				border: 2px solid black;
+				text-align: center;
+				padding:20px;
+				width: 20%;
+				height: 180px;
+
+			}
+			content {
+				position: absolute;
+				bottom:200;
+				margin:20px;
+				float:left;
+				border: 2px solid black;
+				text-align: center;
+				padding:10px;
+				width: 250px;
+				height: 200px;
+
+			}
+			footer {
+				position: relative;
+				top:50%;
+				border: 2px solid black;
+				padding:20px;
+				width:90%;
+				text-align: center;
+						}
+
 		</style>
-	</head>
-	<body>
-		<div>eyal</div>
-		<div>gal</div>
-	</body>
+</head>
+<body>
+	<header>
+		<h1>HEADER</h1>
+	</header>
+	<nav>
+		<h1>NAVIGATION</h1>
+	</nav>
+	<content>
+		<h1>CONTENT</h1>
+	</content>
+	<sidebar>
+		<h1>SIDEBAR</h1>
+	</sidebar>
+	<footer>
+		<h1>FOOTER<h1>
+	</footer>
+	
+</body>
+
 </html>
