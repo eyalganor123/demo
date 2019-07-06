@@ -1,0 +1,70 @@
+<!DOCTYPE >
+<html>
+  <head>
+    <title>REview</title>
+  </head>
+  <body>
+    <script>
+      /* Excercise 1 */
+      function getRandomNumbers(count) {
+        var numArray = [];
+        for (i = 0; i < count; i++) {
+          var num = generateRandomNumber();
+          numArray.push(num);
+        }
+        return numArray;
+      }
+
+      function generateRandomNumber() {
+        var rand = Math.random() * 10;
+        return Math.round(rand);
+      }
+
+      // console.log(getRandomNumbers(14)); // [1, 1, 3, 4]
+
+      /* Excercise 2 */
+      var users = [{id: 2, name: 'eyal'}, {id: 1, name: 'gal'}];
+
+      function getUserById(userId) {
+        var selectedUser = 'no user was selected';
+        for (let i = 0; i < users.length; i++) {
+          var user = users[i];
+          if (user.id == userId) {
+            selectedUser = user;
+          }
+        }
+        return selectedUser;
+      }
+
+      // console.log(getUserById(3)); // {id: 2, name: 'gal'}
+
+      /* Excercise 3 */
+      var persons = [
+        {name: 'eyal', age: 48, id: 0},
+        {name: 'gal', age: 36, id: 1},
+      ];
+
+      function changeName(id, newName) {
+        // implement
+      }
+
+      console.log(changeName(1, 'test')); // [[{name: "eyal", age: 48, id:0}, {name: "test", age: 36, id:1}]]
+
+      /* Excercise 4 */
+      function reverseString(someString) {
+        // implement
+      }
+
+      console.log(reverseString('abc')); // 'cba'
+
+      /* Excercise 5 */
+      function isPalindrom(someString) {
+        // implement
+      }
+
+      console.log(isPalindrom('mom')); // true
+      console.log(isPalindrom('eyal')); // false
+
+    </script>
+  </body>
+</html>
