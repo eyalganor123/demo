@@ -1,0 +1,36 @@
+<!-- Computer to buy HP notebook CF0002nj -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Task Manager</title>
+  </head>
+  <body>
+    <div id="dialog">
+      <h1>Create a new task</h1>
+      <form onsubmit="return false">
+        <div>
+          <label>description</label>
+          <input id="descriptionInput" type="text" />
+        </div>
+
+        <div>
+          <label>status</label>
+          <select id="statusSelect">
+            <option value="0">todo</option>
+            <option value="1">in progress</option>
+            <option value="2">done</option>
+          </select>
+        </div>
+
+        <button id="createTaskButton" type="submit">submit</button>
+      </form>
+    </div>
+
+    <button title="add a new task" id="openDialogButton">+</button>
+
+    <script src="script.js"></script>
+  </body>
+</html>

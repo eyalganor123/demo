@@ -1,0 +1,24 @@
+   
+<!DOCTYPE >
+<html>
+  <head>
+    <title>ex3</title>
+  </head>
+  <body>
+    <script>
+     
+      /* Excercise 3 */
+      var persons = [
+        {name: 'eyal', age: 48, id: 0},
+        {name: 'gal', age: 36, id: 1},
+      ];
+      function changeName(id, newName) {
+       persons[id].name=newName;
+        return persons;
+      }
+      console.log(changeName(1, 'test')); // [[{name: "eyal", age: 48, id:0}, {name: "test", age: 36, id:1}]]
+     
+    </script>
+  </body>
+</html>
+

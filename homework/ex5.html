@@ -1,0 +1,29 @@
+
+    
+<!DOCTYPE >
+<html>
+  <head>
+    <title>ex5</title>
+  </head>
+  <body>
+    <script>
+     
+      /* Excercise 5 */
+      function isPalindrom(someString) {var is=false;var check =0;
+          for (let i = 0; i <someString.length-1; i++) {
+              var x = someString.length-i; 
+              var y=someString.charAt(x-1);
+              var z=someString.charAt(i);
+              if (z==y) {is=true}   ;     //     if (someString.charAt(i)==someString.charAt(x))
+        //     {
+        
+        // alert ('yes');
+        //   }
+    //    }    alert (check);
+        return is;}}
+      console.log(isPalindrom('mom')); // true
+      console.log(isPalindrom('eyal')); // false
+    </script>
+  </body>
+</html>
+
