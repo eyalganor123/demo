@@ -1,9 +1,11 @@
 body {
   background: #cccccc;
-  font-size: 13px; 
+  font-size: 13px;
 }
 
-#dialog, #newDialog, #deleteDialog{
+#dialog,
+#newDialog,
+#deleteDialog {
   width: 300px;
   height: 300px;
   background: #ffffff;
@@ -18,14 +20,18 @@ body {
   padding: 8px;
 }
 img {
-  width:30;
+  width: 30;
 }
 
-#dialog h1{
-  font-size: 16px; 
+#dialog, #newDialog, #deleteDialog {
+  display: none;
 }
 
-#openDialogButton{
+#dialog h1 {
+  font-size: 16px;
+}
+
+#openDialogButton {
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -41,7 +47,7 @@ img {
   transition: 0.4s;
 }
 
-#openDialogButton:hover{
+#openDialogButton:hover {
   cursor: pointer;
   background: blue;
   color: #ffffff;

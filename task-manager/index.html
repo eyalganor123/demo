@@ -8,59 +8,16 @@
     <title>Task Manager</title>
   </head>
   <body id="body">
+
+    <!-- Add task dialog -->
     <div id="dialog">
       <h1>Create a new task</h1>
-      <form onsubmit="return false">
-        <div>
-          <label>description</label>
-          <input id="descriptionInput" type="text" />
-        </div>
 
-        <div>
-          <label>status</label>
-          <select id="statusSelect">
-            <option value="0">todo</option>
-            <option value="1">in progress</option>
-            <option value="2">done</option>
-          </select>
-        </div>
-
-        <button id="createTaskButton" type="submit">submit</button>
-      </form>
+      <!-- This div is populated by JavaScript -->
+      <div class="content"></div>
     </div>
-    <div id="newDialog">
-      <h1>Edit task</h1>      
-      <h1 id="printTask"> Edit task</h1>
-            <form onsubmit="return false">
-              <div>
-                <label>description</label>
-                <input id="newDescriptionInput" type="text" />
-              </div>
-      
-              <div>
-                <label value="1">status</label>
-                <select id="newStatusSelect">
-                  <option value="0">todo</option>
-                  <option value="1">in progress</option>
-                  <option value="2">done</option>
-                </select>
-              </div>
-      
-              <button id="editButton" type="submit">Edit</button>
-            </form>
-          </div>
 
-          <div id="deleteDialog">
-                <h1 id="printTask2"></h1>
-                <h1>DELETE?</h1>
-
-                <form onsubmit="return false">
-                  
-                  <button id="deleteTaskButton" type="submit">yes</button>
-                  <button id="deleteTaskButtonNO" type="submit" >no</button>
-                </form>
-              </div>
-          
+    <!-- Add dialog button -->
     <button title="add a new task" id="openDialogButton">+</button>
 
     <script src="script.js"></script>
