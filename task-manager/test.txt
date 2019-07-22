@@ -1,1 +1,2 @@
-clfsdfsdfsdfsfdsdfsdfsdfsdfsdfsdfsdf
+This is a test file 
+Uploaded to git
