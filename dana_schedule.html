@@ -23,18 +23,18 @@
     <p>Choose Time: <input type="time" id="eta" value="23:00">
         <hr>
         <button onclick="checkTimeAndDate()">Check with Dana's Schedule</button>
-       
+
         <br><br><br><br><br>
         <div id="announce"></div>
-        
+        <p>
 </body>
 <script>
 
     function checkTimeAndDate() {
-        
+
         var day = document.getElementById("daysofweek").value;
         var time = document.getElementById("eta").value;
-        schedulebydays(day, time);
+        scheduleByDays(day, time);
     }
 
     // use this map to update dana's schedule
@@ -45,8 +45,8 @@
     }
 
     //
-    function schedulebydays(day, time) {
-        var msg="Dana Is Unavailable at this time, try again";
+    function scheduleByDays(day, time) {
+        var msg = "Dana Is Unavailable at this time, try again";
         var mapLength = Object.keys(danaScheduleMap).length;
         for (var i = 0; i < mapLength; i++) {
 
@@ -56,13 +56,12 @@
             let x = danaTime[i];
 
             if (danaDay[i] == day) {
-            
-                if (time >= x[0] && time <= x[1]) 
-                    { msg="Dana's Working Hours";}
+
+                if (time >= x[0] && time <= x[1]) { msg = "Dana's Working Hours"; }
 
             }
         }
-        document.getElementById("announce").innerHTML=msg;
+        document.getElementById("announce").innerHTML = msg;
     }
 </script>
 
