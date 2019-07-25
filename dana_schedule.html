@@ -1,0 +1,66 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- select days dialog -->
+    Choose Day:
+    <select autofocus name="days" id="daysofweek">
+        <option value="Sunday">Sunday</option>
+        <option value="Monday">Monday</option>
+        <option value="Tueday">Tueday</option>
+        <option value="Wednesday">Wednesday</option>
+        <option value="Thurday">Thursday</option>
+        <option value="Friday">Friday</option>
+        <option value="Saturday">Saturday</option>
+    </select>
+
+    <p>Choose Time: <input type="time" id="eta" value="23:00">
+        <hr>
+        <button onclick="checkTimeAndDate()">Check with Dana's Schedule</button>
+       
+        <br><br><br><br><br>
+        <div id="announce"></div>
+        
+</body>
+<script>var msg="Dana Is Unavailable at this time, try again";
+
+    function checkTimeAndDate() {
+        var day = document.getElementById("daysofweek").value;
+        var time = document.getElementById("eta").value;
+        schedulebydays(day, time);
+    }
+
+    // use this map to update dana's schedule
+
+    var danaScheduleMap = {
+        "Monday": [min = "10:00", max = "15:00"],
+        "Wednesday": [min = "16:00", max = "19:00"]
+    }
+
+    //
+    function schedulebydays(day, time) {
+      
+        var mapLength = Object.keys(danaScheduleMap).length;
+        for (var i = 0; i < mapLength; i++) {
+
+            var danaTime = Object.values(danaScheduleMap);
+
+            var danaDay = Object.keys(danaScheduleMap);
+            let x = danaTime[i];
+
+            if (danaDay[i] == day) {
+            
+                if (time >= x[0] && time <= x[1]) { msg="Dana's Working Hours"}
+            }
+        }
+        document.getElementById("announce").innerHTML=msg;
+    }
+</script>
+
+</html>
