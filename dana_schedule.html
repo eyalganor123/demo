@@ -28,9 +28,10 @@
         <div id="announce"></div>
         
 </body>
-<script>var msg="Dana Is Unavailable at this time, try again";
+<script>
 
     function checkTimeAndDate() {
+        
         var day = document.getElementById("daysofweek").value;
         var time = document.getElementById("eta").value;
         schedulebydays(day, time);
@@ -45,7 +46,7 @@
 
     //
     function schedulebydays(day, time) {
-      
+        var msg="Dana Is Unavailable at this time, try again";
         var mapLength = Object.keys(danaScheduleMap).length;
         for (var i = 0; i < mapLength; i++) {
 
@@ -56,7 +57,9 @@
 
             if (danaDay[i] == day) {
             
-                if (time >= x[0] && time <= x[1]) { msg="Dana's Working Hours"}
+                if (time >= x[0] && time <= x[1]) 
+                    { msg="Dana's Working Hours";}
+
             }
         }
         document.getElementById("announce").innerHTML=msg;
