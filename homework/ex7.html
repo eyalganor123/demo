@@ -1,0 +1,23 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Print all number which divide by 3 AND 5.
+      // Sum it up and quit when the sumup reaches 100
+      sum = 0;
+      var counter = 0;
+      while (sum + counter < 100) {
+        if (counter % 3 == 0 && counter % 5 == 0) {
+          sum += counter;
+        }
+        counter++;
+      }
+      console.log(sum);
+    </script>
+  </body>
+</html>
